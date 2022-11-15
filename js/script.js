@@ -24,6 +24,10 @@ new Vue({
             'Do shopping',
             'Make dinner'
         ],
+    },
+    methods: {
+        deleteTodo(index) {
+            this.todos.splice(index, i);
+        },
     }
-}
-);
+});
