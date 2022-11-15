@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+}
+
+.new-todo {
+    text-align: center;
+}
+
+.new-todo input {
+    padding: 10px 20px;
+    border-radius: 1rem;
+    border-width: 1px;
+    min-width: 300px;
+    margin-right: 10px;
+}
+
+.todos-container {
+    margin: 40px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    padding: 30px;
+}
+
+.todos-container ul {
+    list-style: none;
+}
+
+.todo {
+    border-bottom: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.todo:hover {
+    background-color: white;
+}
+
+.todo i {
+    float: right;
+}
+
+.todo i:hover {
+    color: salmon;
+}
