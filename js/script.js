@@ -16,7 +16,7 @@ Bonus:
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 */
 
-new Vue({
+const app = new Vue({
     el: '#root',
     data: {
         todos: [
@@ -40,14 +40,14 @@ new Vue({
     },
     methods: {
         addTodo(){
-            this.todos.push(this.newTodo.text);
+            this.todos.push(this.newTodo)
             this.newTodo.text = '';
         },
         deleteTodo(index) {
-            this.todos.splice(index, i);
+            this.todos.splice(index, 1);
         },
         todoDone(){
-
+            
         }
     }
 });
