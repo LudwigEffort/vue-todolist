@@ -20,19 +20,34 @@ new Vue({
     el: '#root',
     data: {
         todos: [
-            'Do homeworks',
-            'Do shopping',
-            'Make dinner'
+            {
+                text: 'Do homeworks',
+                done: false,
+            },
+            {
+                text: 'Do shopping',
+                done: false,
+            },
+            {
+                text: 'Make dinner',
+                done: false,
+            },
         ],
-        newTodo: '',
+        newTodo: {
+            text: '',
+            done: false,
+        },
     },
     methods: {
         addTodo(){
-            this.todos.push(this.newTodo);
-            this.newTodo = '';
+            this.todos.text.push(this.newTodo.text);
+            this.newTodo.text = '';
         },
         deleteTodo(index) {
             this.todos.splice(index, i);
         },
+        todoDone(){
+
+        }
     }
 });
