@@ -40,8 +40,11 @@ const app = new Vue({
     },
     methods: {
         addTodo(){
-            this.todos.push(this.newTodo)
-            this.newTodo.text = '';
+            if(this.newTodo.text.trim()) {
+                this.newTodo.text = this.newTodo.text;
+                this.todos.push({...this.newTodo});
+                this.newTodo.text = '';
+            }
         },
         deleteTodo(index) {
             this.todos.splice(index, 1);
