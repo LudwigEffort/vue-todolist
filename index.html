@@ -22,7 +22,11 @@
     
         <div class="todos-container">
             <ul v-if="todos.length !== 0">
-                <li v-for="(todo, i) in todos" :key="todo.text" class="todo" @click="todoDone">
+                <li v-for="(todo, i) in todos" 
+                    :key="todo.text" 
+                    class="todo" 
+                    @click="todoDone(i)"
+                    :class="(todo.done === true) ? 'done' : ''">
                     {{ todo.text }}
                     <i class="fas fa-times" @click="deleteTodo(i)"></i>
                 </li>

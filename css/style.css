@@ -50,3 +50,7 @@
 .todo i:hover {
     color: salmon;
 }
+
+.done {
+    background-color: red;
+}
