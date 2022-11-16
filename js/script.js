@@ -24,8 +24,13 @@ new Vue({
             'Do shopping',
             'Make dinner'
         ],
+        newTodo: '',
     },
     methods: {
+        addTodo(){
+            this.todos.push(this.newTodo);
+            this.newTodo = '';
+        },
         deleteTodo(index) {
             this.todos.splice(index, i);
         },
